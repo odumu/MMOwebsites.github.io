@@ -1,0 +1,867 @@
+/* General CSS */
+:root {
+    --pri-color: #00ffc893;
+    --sec-color: #3f3f3f;
+    --new-bg-color: #2c2c2c;
+    --text-color: #fff;
+    --spacer: 1rem;
+    --bg-color: #505050;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: calibri, Arial, Helvetica, sans-serif;
+    line-height: 2.5rem;
+    word-wrap: break-word;
+    font-size: clamp(1.9rem, 50% ,2rem);
+    background-color: var(--sec-color);
+    color: var(--text-color);
+    word-spacing: 0.2rem;
+    
+    animation: body;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation of the website */
+nav {
+    background-color: var(--pri-color);
+    min-height: 5rem;
+    /* position: sticky;
+    top: 0px; */
+}
+
+nav h2 {
+    font-weight: 500;
+}
+
+nav > div {
+    text-align: center;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--text-color);
+}
+
+nav > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+nav > div > ul > li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav > div > ul > li > a {
+    color: var(--text-color);
+}
+
+/* specification */
+.diff {
+    text-decoration: underline;
+    font-weight: bold;
+    color: var(--bg-color);
+}
+
+.small {
+    width: 3.8rem;
+}
+
+/* Hero section of the page */
+.head {
+    background-color: var(--pri-color);
+    color: var(--text-color);
+    padding: 1.5rem;
+    min-height: 38rem;
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 20% 100%, 100% 80%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 100%, 20% 100%, 100% 80%, 100% 0%);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.head > div {
+    width: 77%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+}
+
+.head > div > div {
+    width: 75%;
+    margin: auto;
+    animation: welcome;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.head h1 {
+    font-weight: normal;
+}
+
+.head > div > div > p {
+    margin: 2rem 0;
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    width: 15rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    background-color: #00ffc800;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.btn:hover {
+    background-color: #00ffc893;
+}
+
+.head form {
+    border: 0.2rem solid transparent;
+    border-radius: 1rem;
+    color: var(--text-color);
+    background-color: var(--sec-color);
+    min-height: 20rem;
+    width: 25%;
+    min-width: 20rem;
+    text-align: center;
+    position: relative;
+    top: 6rem;
+    height: 30rem;
+    box-shadow: 0.5rem 0.5rem 2rem 0.3rem #000;
+
+    animation: welcome-2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.head form input {
+    display: block;
+    padding: 0.8rem;
+    margin: 0.8rem auto;
+    width: 65%;
+    border-radius: 0.5rem;
+}
+
+.head form input[type="submit"] {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid white;
+    margin-bottom: 2rem;
+}
+
+.head > div > form h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.feat {
+    background-color: var(--pri-color);
+    min-height: 26rem;
+}
+
+.feat img {
+    width: 30rem;
+}
+
+.feat > div {
+    width: 72%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+
+    animation: welcome-3;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.feat p {
+    width: clamp(50ch, 50%, 55ch);
+}
+
+.feat h1 {
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+}
+
+.pad {
+    padding: 2rem;
+}
+
+/* First section */
+.first-section {
+    text-align: center;
+    margin: 8rem auto 2.5rem auto;
+}
+
+.first-section p {
+    width: clamp(40ch, 50%, 50ch);
+    margin: 0 auto;
+}
+
+.first-feature  img {
+    width: 28rem;
+}
+
+.first-feature {
+    background-color: #33333356;
+}
+
+.first-feature  > div {
+    width: 72%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 5rem;
+}
+
+.first-feature p {
+    width: clamp(55ch, 50%, 60ch);
+}
+
+.first-feature h2 {
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+}
+
+/* Second section */
+.second-section img {
+    width: 5rem;
+}
+
+.second-section > div {
+    width: 60%;
+    margin: 3.5rem auto;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.second-section > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-section h1 {
+    margin: 0.5rem 0;
+}
+
+.second-section a {
+    margin-top: 1rem;
+    color: var(--pri-color);
+}
+
+.second-feature img {
+    width: 4.5rem;
+}
+
+.second-feature > div {
+    width: 74%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.second-feature > div > div {
+    cursor: pointer;
+}
+
+.grid-1 {
+    grid-column: span 12;
+}
+
+.grid-2 {
+    grid-column: span 8;
+    grid-row: 2/2;
+}
+
+.grid-3 {
+    grid-column: span 4;
+    grid-row: 2/2;
+}
+
+.grid-4 {
+    grid-column: span 4;
+    grid-row: 3/3;    
+}
+
+.grid-5 {
+    grid-column: span 4;
+    grid-row: 3/3; 
+}
+
+.grid-6 {
+    grid-column: span 4;
+    grid-row: 3/3; 
+}
+
+.second-feature > div > div {
+    border: 2px solid grey;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    box-shadow: 0.5rem 0.5rem 2rem 0.3rem #000;
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+}
+
+.second-feature > div > div:hover {
+    scale: 1.05;
+}
+
+/* Third section */
+.third-section > div {
+    width: 65%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.div-1 img {
+    width: 30rem;
+}
+
+.div-2 {
+    /* height: 100%; */
+    background-color: transparent;
+    color: var(--text-color);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: space-between;
+    gap: 2rem;
+}
+
+.div-2 div {
+    background-color: var(--pri-color);
+    padding: 1.5rem;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 2rem 0.3rem #000;
+}
+
+/* Fourth section */
+.forth-section {
+    background-color: var(--pri-color);
+}
+
+.forth-section img {
+    width: 30rem;
+}
+
+.forth-section > div {
+    width: 68%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.div-a p {
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.div-a h1 {
+    font-weight: normal;
+}
+
+/* Fifth section */
+.fifth-section {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.fifth-section > div {
+    width: 75%;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+}
+
+.fifth-section > div > div {
+    border: 2px solid grey;
+    height: 15rem;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 2rem 0.3rem #000;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    transition-property: all;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+}
+
+.fifth-section > div > div:hover {
+    scale: 1.1;
+}
+
+.fifth-section > div img {
+    width: 10rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--new-bg-color);
+    min-height: 14rem;
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 3.5rem;
+}
+
+footer > div {
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+footer h2 {
+    margin-bottom: 0.4rem;
+}
+
+footer a {
+    color: #fff;
+}
+
+.together {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main Docs design */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.main > div > section:first-child {
+    padding: 2rem;
+    border: 2px solid grey;
+    border-radius: 1rem;
+    width: 40%;
+    box-shadow: 0.5rem 0.5rem 2rem 0.3rem #000;
+}
+
+.main > div > section:first-child h3 {
+    font-weight: normal;
+    margin-top: 2.5rem;
+    font-size: 2.5rem
+
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.main > div > section:first-child a {
+    color: darkgrey;
+    border-bottom: 2px solid grey;
+    display: block;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.main > div > section:last-child {
+    padding: 2rem;
+    border: 2px solid grey;
+    border-radius: 1rem;
+    width: 65%;
+    box-shadow: 0.5rem 0.5rem 2rem 0.3rem #000;
+}
+
+.main > div > section:last-child h3 {
+    font-weight: normal;
+    margin: 2.5rem 0;
+    font-size: 2.5rem
+}
+
+.main > div > section:last-child h2 {
+    font-weight: normal;
+    margin: 2.5rem 0;
+    font-size: 3rem
+}
+
+.main > div > section:last-child p, code, pre {
+    color: darkgrey;
+}
+
+.main > div > section:last-child button {
+    padding: 1rem 1.5rem;
+    width: 15rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #fff;
+    font-weight: bolder;
+    background-color: #00ffc800;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.main > div > section:last-child button:hover {
+    background-color: #00ffc893;
+}
+
+
+.pre {
+    background-color: var(--new-bg-color);
+    padding: 0.4rem;
+    display: block;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+code {
+    background-color: var(--pri-color);
+    padding: 0.4rem;
+    display: block;
+    color: #fff;
+}
+
+.main > div {
+    width: 78%;
+    margin: 0 auto;
+    margin: 6rem;
+    display: flex;
+    gap: 2.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+/* special */
+.div-p > p {
+    display: none;
+}
+
+/* Keyframes */
+@keyframes welcome {
+    0% {
+        transform: translateX(-125%)
+    }
+}
+
+@keyframes welcome-2 {
+    0% {
+        transform: translateX(200%)
+    }
+}
+
+@keyframes welcome-3 {
+    0% {
+        transform: translateY(-200%)
+    }
+}
+
+@keyframes body {
+    0% {
+        background: #3f3f3f;
+    }
+    100%{
+        background: #2c2c2c;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 80rem) {
+    
+    .head > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .head h1 {
+        line-height: 3.5rem;
+    }
+    
+    .head form {
+        width: 40%;
+    }
+    
+    .second-section > div {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 5rem;
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    .a {
+        grid-column: span 3;
+    }
+
+    .b {
+        grid-column: span 3;
+    }
+
+    .c {
+        grid-column: span 6;
+    }
+    
+    /* remember to remove this later */    
+    .fifth-section > div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .feat > div {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .feat h1 {
+        margin: 2rem auto 1rem auto;
+    }
+    
+    .first-feature p {
+        width: clamp(33ch, 50%, 38ch);
+    }
+    
+    .second-feature > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0;
+        margin-bottom: 5rem;
+    }
+    
+    .second-feature > div > div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 48rem) {
+    nav > div {
+        text-align-last: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+    
+    nav {
+        border-bottom: 3px solid grey;
+    }
+    nav > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav > div ul {
+        background-color: grey;
+        padding: 1rem;
+        border-radius: 100vmax;
+    }
+
+    .feat p {
+        width: clamp(35ch, 50%, 40ch);
+    }
+
+    .first-feature  > div {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    .third-section > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .forth-section > div {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .main > div {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .main > div > section:first-child {
+        width: 95%;
+    }
+    
+    .main > div > section:last-child {
+        width: 95%;
+    }
+
+    footer > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start
+    }
+    
+    footer > div > div {
+        margin: 0.5rem;
+    }
+
+    .div-p {
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .div-p > p {
+        display: block;
+        width: clamp(30ch, 50%, 35ch);
+        margin: 0 auto;
+    }
+
+    .pad > div {
+        animation: welcome-4;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes welcome {
+        0% {
+            transform: translateY(-125%)
+        }
+    }
+    
+    @keyframes welcome-2 {
+        0% {
+            transform: translateY(200%)
+        }
+    }
+
+    @keyframes welcome-3 {
+        0% {
+            transform: translateX(-200%)
+        }
+    }
+
+    @keyframes welcome-4 {
+        0% {
+            transform: translateX(200%)
+        }
+    }
+}
